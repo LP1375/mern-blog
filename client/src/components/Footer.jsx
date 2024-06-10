@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer } from 'flowbite-react'
 import { Link } from 'react-router-dom'
-import {BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble} from 'react-icons/bs'
+import {BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble, BsLinkedin} from 'react-icons/bs'
 
 export default function FooterCom() {
   return (
@@ -14,17 +14,32 @@ export default function FooterCom() {
                     Blog
                 </Link>
                 </div>
-                <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6">
-                    <div>
-                        <Footer.Title title='About' />
+                <div className="grid grid-cols-2 gap-8 mt-4 sm:grid-cols-2 sm:gap-6">
+
+                <div>
+                        <Footer.Title title='Follow us' />
                         <Footer.LinkGroup col>
                             <Footer.Link
-                                href='https://www.youtube.com/'
+                                href='https://github.com/LP1375'
                                 target='_blank'
                                 rel='noopener noreferrer'
                             >
-                                Youtube
+                                GitHub
                             </Footer.Link>
+
+                            <Footer.Link
+                                href='https://www.linkedin.com/in/vladyslav-lypovetskyi-b25185255/'
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                LinkedIn
+                            </Footer.Link>
+                        </Footer.LinkGroup>
+                    </div>
+
+                    <div>
+                        <Footer.Title title='About' />
+                        <Footer.LinkGroup col>
 
                             <Footer.Link
                                 href='/about'
@@ -36,58 +51,14 @@ export default function FooterCom() {
                         </Footer.LinkGroup>
                     </div>
 
-                    <div>
-                        <Footer.Title title='Follow us' />
-                        <Footer.LinkGroup col>
-                            <Footer.Link
-                                href='https://github.com/LP1375/mern-blog/commits/main/'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                GitHub
-                            </Footer.Link>
-
-                            <Footer.Link
-                                href='#'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                Discord
-                            </Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-
-                    <div>
-                        <Footer.Title title='Legal' />
-                        <Footer.LinkGroup col>
-                            <Footer.Link
-                                href='#'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                Privacy Policy
-                            </Footer.Link>
-
-                            <Footer.Link
-                                href='#'
-                                target='_blank'
-                                rel='noopener noreferrer'
-                            >
-                                Terms &amp; Conditions
-                            </Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
                 </div>
             </div>
             <Footer.Divider />
             <div className="w-full sm:flex sm:items-center sm:justify-between">
                 <Footer.Copyright href='#' by="Analytic's Blog" year = {new Date().getFullYear()}/>
                 <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
-                    <Footer.Icon href='#' icon={BsFacebook} />
-                    <Footer.Icon href='#' icon={BsInstagram} />
-                    <Footer.Icon href='#' icon={BsTwitter} />
-                    <Footer.Icon href='#' icon={BsGithub} />
-                    <Footer.Icon href='#' icon={BsDribbble} />
+                    <Footer.Icon target='_blank' href='https://www.linkedin.com/in/vladyslav-lypovetskyi-b25185255/' icon={BsLinkedin} />
+                    <Footer.Icon target='_blank' href='https://github.com/LP1375' icon={BsGithub} />
                 </div>
             </div>
         </div>

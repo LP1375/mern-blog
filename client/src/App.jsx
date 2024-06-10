@@ -5,7 +5,6 @@ import Dashboard from './pages/Dashboard'
 import About from './pages/About'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
-import Projects from './pages/Projects'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import PrivateRoute from './components/PrivateRoute'
@@ -15,6 +14,7 @@ import UpdatePost from './pages/UpdatePost'
 import PostPage from './pages/PostPage'
 import ScrollToTop from './components/ScrollToTop'
 import Search from './pages/Search'
+import ErrorPage from './pages/ErrorPage'
 
 export default function App() {
   return (
@@ -37,8 +37,9 @@ export default function App() {
           <Route path='/update-post/:postId' element={<UpdatePost />}/>
         </Route>
 
-        <Route path='/projects' element={<Projects />}/>
         <Route path='/post/:postSlug' element={<PostPage />}/>
+
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
